@@ -1,0 +1,7 @@
+url http://rmgtestingserver/domain/HRM_System/
+unhh hrhead@gmail.com
+pwhh hrhead@123
+unho hrofficer@gmail.com
+pwho hrofficer@123
+unha hrassistant@gmail.com
+pwha hrassistant@123
