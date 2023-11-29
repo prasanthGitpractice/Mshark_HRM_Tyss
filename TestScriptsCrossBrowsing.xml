@@ -5,16 +5,16 @@
   <test name="Test-Runner-1">
    <parameter name="BROWSER" value="chrome"></parameter>
     <classes>
-      <class name="com.TCs_usingPOMnUtils.CreateHRAssistantDeleteHRAAgainLoginTC34_Test"/>
-      <class name="com.TCs_usingPOMnUtils.AddEmployeeTC01_Test"/>
+      <class name="testScripts_Baseclass/CreateHRAssistantDeleteHRAAgainLoginTC34_Test.java"/>
+      <class name="testScripts_Baseclass/AddEmployeeTC01_Test.java"/>
     </classes>
   </test> <!-- Test -->
   
   <test name="Test-Runner-2">
    <parameter name="BROWSER" value="edge"></parameter>
     <classes>
-      <class name="com.TCs_usingPOMnUtils.CreateHRAssistantDeleteHRAAgainLoginTC34_Test"/>
-      <class name="com.TCs_usingPOMnUtils.AddEmployeeTC01_Test"/>
+      <class name="testScripts_Baseclass/CreateHRAssistantDeleteHRAAgainLoginTC34_Test.java"/>
+      <class name="testScripts_Baseclass/AddEmployeeTC01_Test.java"/>
     </classes>
   </test> <!-- Test -->
   

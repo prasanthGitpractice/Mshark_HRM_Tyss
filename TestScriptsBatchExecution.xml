@@ -3,8 +3,8 @@
 <suite thread-count="1" name="Suite">
   <test thread-count="1" name="Test">
     <classes>
-      <class name="com.TCs_usingPOMnUtils.CreateHRAssistantDeleteHRAAgainLoginTC34_Test"/>
-      <class name="com.TCs_usingPOMnUtils.AddEmployeeTC01_Test"/>
+      <class name="testScripts_Baseclass/CreateHRAssistantDeleteHRAAgainLoginTC34_Test.java"/>
+      <class name="testScripts_Baseclass/AddEmployeeTC01_Test.java"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
