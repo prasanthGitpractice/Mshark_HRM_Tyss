@@ -9,8 +9,8 @@
 	
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.TCs_usingPOMnUtils.CreateHRAssistant_DeleteHRA_AgainLogin_TC_34_Test"/>
-      <class name="com.TCs_usingPOMnUtils.AddEmployee_TC_01_Test"/>
+      <class name="com.TCs_usingPOMnUtils.CreateHRAssistantDeleteHRAAgainLoginTC34_Test"/>
+      <class name="com.TCs_usingPOMnUtils.AddEmployeeTC01_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
