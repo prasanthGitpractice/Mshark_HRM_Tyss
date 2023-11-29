@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts_Baseclass.AddEmployeeHRH_Count_Employee_KPI_FromHRO_TC_54_Test">
+      <class name="testScripts_Baseclass.AddEmployeeTC01_Test">
         <methods>
           <include name="config_BC"/>
           <include name="config_BS"/>
           <include name="config_AC"/>
           <include name="config_AS"/>
-          <include name="tc54"/>
           <include name="config_BM"/>
           <include name="config_AM"/>
+          <include name="tC_01"/>
         </methods>
-      </class> <!-- testScripts_Baseclass.AddEmployeeHRH_Count_Employee_KPI_FromHRO_TC_54_Test -->
+      </class> <!-- testScripts_Baseclass.AddEmployeeTC01_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

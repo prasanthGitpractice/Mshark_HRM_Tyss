@@ -9,8 +9,8 @@
 	
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testScripts_Baseclass/CreateHRAssistantDeleteHRAAgainLoginTC34_Test.java"/>
-      <class name="testScripts_Baseclass/AddEmployeeTC01_Test.java"/>
+      <class name="testScripts_Baseclass.CreateHRAssistantDeleteHRAAgainLoginTC34_Test"/>
+      <class name="testScripts_Baseclass.AddEmployeeTC01_Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
