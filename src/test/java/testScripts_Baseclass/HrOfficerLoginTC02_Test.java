@@ -1,6 +1,7 @@
 package testScripts_Baseclass;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -34,9 +35,10 @@ public class HrOfficerLoginTC02_Test extends BaseClass
 
 		wUtil.waitForAlertNswitchNAccept(driver);
 
-		String expurl = "Admin_Dashboard";
+		String expurl = "http://rmgtestingserver/domain/HRM_System/Admin_Dashboard/Admin_Dashboard.php";
 		wUtil.waitForUrlPresent(driver, 20, expurl);
 		String actUrl = driver.getCurrentUrl();
+		Reporter.log(actUrl, true);
 
 		Assert.assertEquals(actUrl, expurl);
 

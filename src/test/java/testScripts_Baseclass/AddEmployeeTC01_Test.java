@@ -96,10 +96,18 @@ public class AddEmployeeTC01_Test extends BaseClass
 		wUtil.waitForAlertNswitchNAccept(driver);
 
 		wutil.waitUntilEleToBeClickable(driver, hp.getEmployeeEle(), 20);
-		
-		hp.navigateToAddEmployee(driver);
 		EmployeeListPage emplp=new EmployeeListPage(driver);
-		emplp.getAddEmpBtn().click();
+		
+		try
+		{
+			hp.navigateToAddEmployee(driver);
+			emplp.getAddEmpBtn().click();
+		}
+		catch (Exception e) 
+		{
+			wutil.waitUntilEleToBeClickable(driver, emplp.getAddEmpBtn(), 40);
+			emplp.getAddEmpBtn().click();
+		}
 
 		//Change Date Formats...during Script execution it is entering in different format..
 		eUtil.readMultipleDataFromExcel("TC_01", driver,13, 15);
@@ -127,8 +135,8 @@ public class AddEmployeeTC01_Test extends BaseClass
 
 		String expEmployeeId = eUtil.readDataFromExcel("TC_01", 2, 16);
 		String expEmpFname = eUtil.readDataFromExcel("TC_01", 3, 16);
-
-		adEmp.searchEmployee(expEmployeeId);
+		
+		adEmp.searchEmployee(driver, expEmployeeId);
 		
 		String actEmpName = emplp.getEmpNameByUsingEmpID(driver, expEmployeeId);
 		

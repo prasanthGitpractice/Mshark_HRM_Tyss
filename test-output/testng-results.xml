@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[tc02--- TestScript Execution Starts From Here ---]]>
+    </line>
+    <line>
+      <![CDATA[Login Successfully!!]]>
+    </line>
+    <line>
+      <![CDATA[http://rmgtestingserver/domain/HRM_System/Admin_Dashboard/Admin_Dashboard.php]]>
+    </line>
+    <line>
+      <![CDATA[Successfully Logout!]]>
+    </line>
+    <line>
+      <![CDATA[tc02 Executed Succeessfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-11-30T13:10:45 IST" name="Default suite" finished-at="2023-11-30T13:10:52 IST" duration-ms="6829">
+  <suite started-at="2023-11-30T15:26:24 IST" name="Default suite" finished-at="2023-11-30T15:26:38 IST" duration-ms="14887">
     <groups>
     </groups>
-    <test started-at="2023-11-30T13:10:45 IST" name="Default test" finished-at="2023-11-30T13:10:52 IST" duration-ms="6829">
-      <class name="com.Practice_Package.SampleTest">
-        <test-method signature="m1Test()[pri:0, instance:com.Practice_Package.SampleTest@3e27ba32]" started-at="2023-11-30T13:10:45 IST" name="m1Test" finished-at="2023-11-30T13:10:52 IST" duration-ms="6786" status="PASS">
+    <test started-at="2023-11-30T15:26:24 IST" name="Default test" finished-at="2023-11-30T15:26:38 IST" duration-ms="14887">
+      <class name="testScripts_Baseclass.HrOfficerLoginTC02_Test">
+        <test-method is-config="true" signature="config_BS()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:23 IST" name="config_BS" finished-at="2023-11-30T15:26:24 IST" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- m1Test -->
-      </class> <!-- com.Practice_Package.SampleTest -->
+        </test-method> <!-- config_BS -->
+        <test-method is-config="true" signature="config_BC()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:24 IST" name="config_BC" finished-at="2023-11-30T15:26:26 IST" duration-ms="2456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config_BC -->
+        <test-method is-config="true" signature="config_BM()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:26 IST" name="config_BM" finished-at="2023-11-30T15:26:26 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config_BM -->
+        <test-method signature="tc02()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:26 IST" name="tc02" finished-at="2023-11-30T15:26:38 IST" duration-ms="12080" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[tc02--- TestScript Execution Starts From Here ---]]>
+            </line>
+            <line>
+              <![CDATA[Login Successfully!!]]>
+            </line>
+            <line>
+              <![CDATA[http://rmgtestingserver/domain/HRM_System/Admin_Dashboard/Admin_Dashboard.php]]>
+            </line>
+            <line>
+              <![CDATA[Successfully Logout!]]>
+            </line>
+            <line>
+              <![CDATA[tc02 Executed Succeessfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc02 -->
+        <test-method is-config="true" signature="config_AM()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:38 IST" name="config_AM" finished-at="2023-11-30T15:26:38 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config_AM -->
+        <test-method is-config="true" signature="config_AC()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:38 IST" name="config_AC" finished-at="2023-11-30T15:26:38 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config_AC -->
+        <test-method is-config="true" signature="config_AS()[pri:0, instance:testScripts_Baseclass.HrOfficerLoginTC02_Test@31ea9581]" started-at="2023-11-30T15:26:39 IST" name="config_AS" finished-at="2023-11-30T15:26:39 IST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config_AS -->
+      </class> <!-- testScripts_Baseclass.HrOfficerLoginTC02_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

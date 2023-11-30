@@ -205,8 +205,10 @@ public class AddEmployeePage extends WebDriverUtils
 		cancelBtn.click();
 	}	
 	
-	public void searchEmployee(String empName)
+	public void searchEmployee(WebDriver driver, String empName)
 	{
+		WebDriverUtils wutil=new WebDriverUtils();
+		wutil.waitUntilEleToBeVisible(driver, searchBoxEle_Emp, 60);	
 		searchBoxEle_Emp.sendKeys(empName);
 	}
 	

@@ -16,7 +16,7 @@ public class EmployeeListPage
 	@FindBy(xpath = "//button[contains(.,'Add Employee')]")
 	private WebElement addEmpBtn;
 	
-	@FindBy(xpath = "//input[@type='search']")
+	@FindBy(xpath = "//div[@class='card-body']//input[@type='search']")
 	private WebElement searchBoxEle;
 		
 	@FindBy(xpath="//tbody/tr/td[.='kav']/following-sibling::td[@style='width: 10%']/i[@title='Edit Employee']")

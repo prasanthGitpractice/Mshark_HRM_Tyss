@@ -47,7 +47,7 @@ public class DeleteEmployeeFromHROCheckEmployeeTC09_Test extends BaseClass
 		String employeeId = eUtil.readDataFromExcel("TC_09", 2, 4);
 
 		AddEmployeePage ademp = new AddEmployeePage(driver);
-		ademp.searchEmployee(employeeId);
+		ademp.searchEmployee(driver, employeeId);
 		
 		ademp.deleteEmployee(driver, employeeId);
 		
