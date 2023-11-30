@@ -1,171 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[tC_01--- TestScript Execution Starts From Here ---]]>
-    </line>
-    <line>
-      <![CDATA[tC_01---Test Script Execution Skipped]]>
-    </line>
   </reporter-output>
-  <suite started-at="2023-11-29T16:03:09 IST" name="Default suite" finished-at="2023-11-29T16:03:16 IST" duration-ms="6898">
+  <suite started-at="2023-11-30T12:45:57 IST" name="Default suite" finished-at="2023-11-30T12:46:08 IST" duration-ms="10405">
     <groups>
-      <group name="Regression">
-        <method signature="AddEmployeeTC01_Test.tC_01()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" name="tC_01" class="testScripts_Baseclass.AddEmployeeTC01_Test"/>
-      </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-11-29T16:03:09 IST" name="Default test" finished-at="2023-11-29T16:03:16 IST" duration-ms="6898">
-      <class name="testScripts_Baseclass.AddEmployeeTC01_Test">
-        <test-method is-config="true" signature="config_BS()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:09 IST" name="config_BS" finished-at="2023-11-29T16:03:09 IST" duration-ms="249" status="PASS">
+    <test started-at="2023-11-30T12:45:57 IST" name="Default test" finished-at="2023-11-30T12:46:08 IST" duration-ms="10405">
+      <class name="com.Practice_Package.SampleTest">
+        <test-method signature="m1Test()[pri:0, instance:com.Practice_Package.SampleTest@117159c0]" started-at="2023-11-30T12:45:57 IST" name="m1Test" finished-at="2023-11-30T12:46:08 IST" duration-ms="10354" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config_BS -->
-        <test-method is-config="true" signature="config_BC()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:09 IST" name="config_BC" finished-at="2023-11-29T16:03:16 IST" duration-ms="6464" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=119.0.6045.199)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa091a36805bad41dd3b255edf33318, get {url=http://rmgtestingserver/domain/HRM_System/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\PRASANTH\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59179/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa091a36805bad41dd3b255edf33318]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=119.0.6045.199)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa091a36805bad41dd3b255edf33318, get {url=http://rmgtestingserver/domain/HRM_System/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\PRASANTH\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59179/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa091a36805bad41dd3b255edf33318
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-at com.HRM.GenericUtils.BaseClass.config_BC(BaseClass.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config_BC -->
-        <test-method is-config="true" signature="config_BM()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:16 IST" name="config_BM" finished-at="2023-11-29T16:03:16 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config_BM -->
-        <test-method signature="tC_01()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:16 IST" name="tC_01" finished-at="2023-11-29T16:03:16 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=119.0.6045.199)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa091a36805bad41dd3b255edf33318, get {url=http://rmgtestingserver/domain/HRM_System/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\PRASANTH\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59179/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa091a36805bad41dd3b255edf33318]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=119.0.6045.199)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0aa091a36805bad41dd3b255edf33318, get {url=http://rmgtestingserver/domain/HRM_System/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\PRASANTH\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59179/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0aa091a36805bad41dd3b255edf33318
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-at com.HRM.GenericUtils.BaseClass.config_BC(BaseClass.java:63)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-            <line>
-              <![CDATA[tC_01---Test Script Execution Skipped]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tC_01 -->
-        <test-method is-config="true" signature="config_AM()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:16 IST" name="config_AM" finished-at="2023-11-29T16:03:16 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config_AM -->
-        <test-method is-config="true" signature="config_AC()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:16 IST" name="config_AC" finished-at="2023-11-29T16:03:16 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config_AC -->
-        <test-method is-config="true" signature="config_AS()[pri:0, instance:testScripts_Baseclass.AddEmployeeTC01_Test@31ea9581]" started-at="2023-11-29T16:03:16 IST" name="config_AS" finished-at="2023-11-29T16:03:16 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- config_AS -->
-      </class> <!-- testScripts_Baseclass.AddEmployeeTC01_Test -->
+        </test-method> <!-- m1Test -->
+      </class> <!-- com.Practice_Package.SampleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

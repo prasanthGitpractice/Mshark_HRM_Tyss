@@ -23,26 +23,18 @@ public class CmdParameterTest {
 		System.out.println(PASSWORD);
 
 
-		/*
-		 * WebDriverManager.chromedriver().setup(); WebDriver driver=new ChromeDriver();
-		 * 
-		 * driver.manage().window().maximize();
-		 * 
-		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		 * 
-		 * driver.get(URL);
-		 * 
-		 * driver.findElement(By.name("hr_email")).sendKeys(USERNAME);
-		 * driver.findElement(By.name("hr_password")).sendKeys(PASSWORD); WebElement
-		 * type_dd = driver.findElement(By.id("hr_type")); Select s=new Select(type_dd);
-		 * 
-		 * s.selectByValue("HR Head");
-		 * 
-		 * driver.findElement(By.name("login_hr")).click();
-		 * 
-		 * System.out.println("properties passed successfully");
-		 * 
-		 */
+		WebDriverManager.chromedriver().setup(); WebDriver driver=new
+		ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(URL);
+		driver.findElement(By.name("hr_email")).sendKeys(USERNAME);
+		driver.findElement(By.name("hr_password")).sendKeys(PASSWORD); WebElement
+		type_dd = driver.findElement(By.id("hr_type")); Select s=new Select(type_dd);
+		s.selectByValue("HR Head"); 
+		driver.findElement(By.name("login_hr")).click();
+		System.out.println("properties passed successfully");
+		 
 	}
 
 }
