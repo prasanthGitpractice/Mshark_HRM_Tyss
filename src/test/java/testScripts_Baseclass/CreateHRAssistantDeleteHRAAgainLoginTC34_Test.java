@@ -13,7 +13,7 @@ import com.ObjectRepo.DeleteAdmin;
 import com.ObjectRepo.Home_Page;
 import com.ObjectRepo.LoginPage;
 
-// Tested
+// Tested-now
 @Listeners(com.HRM.GenericUtils.ListenersImplementation.class)
 public class CreateHRAssistantDeleteHRAAgainLoginTC34_Test extends BaseClass
 {
@@ -104,10 +104,6 @@ public class CreateHRAssistantDeleteHRAAgainLoginTC34_Test extends BaseClass
 		String ActpopupMsg = wUtil.getAlertMessage(driver);
 		
 		Assert.assertEquals(ActpopupMsg, expAlertMsg);
-		
-		hp.logOutApp();
-		
-		wUtil.waitForAlertNswitchNAccept(driver);
 
 	}
 }

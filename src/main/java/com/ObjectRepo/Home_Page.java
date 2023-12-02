@@ -10,7 +10,7 @@ import com.HRM.GenericUtils.WebDriverUtils;
 public class Home_Page
 {
 	// Declare WebElements
-	@FindBy(xpath = "//p[.='Dashboard']")
+	@FindBy(xpath="//ul[@class='nav nav-pills nav-sidebar flex-column']//a[@href='Admin_Dashboard.php']")
 	private WebElement dashBoardEle;
 	
 	@FindBy(xpath = "//i[@class='nav-icon fa fa-handshake']")
@@ -200,7 +200,6 @@ public class Home_Page
 	
 	public void logOutApp() throws Throwable
 	{
-		Thread.sleep(10000);
 		profileICONEle.click();
 		logOutBtn.click();
 	}

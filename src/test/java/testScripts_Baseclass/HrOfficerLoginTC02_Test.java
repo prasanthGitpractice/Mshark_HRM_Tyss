@@ -11,7 +11,7 @@ import com.HRM.GenericUtils.WebDriverUtils;
 import com.ObjectRepo.Home_Page;
 import com.ObjectRepo.LoginPage;
 
-//TESTED
+//TESTED-now
 @Listeners(com.HRM.GenericUtils.ListenersImplementation.class)
 public class HrOfficerLoginTC02_Test extends BaseClass
 {

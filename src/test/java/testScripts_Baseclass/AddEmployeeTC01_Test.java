@@ -19,14 +19,14 @@ import com.ObjectRepo.EmployeeListPage;
 import com.ObjectRepo.Home_Page;
 import com.ObjectRepo.LoginPage;
 
-// Tested
+// Tested-now
 @Listeners(com.HRM.GenericUtils.ListenersImplementation.class)
 public class AddEmployeeTC01_Test extends BaseClass
 {
 	
 	//Tested
 	@Test(groups = "Regression")
-	public void tC_01() throws Throwable 
+	public void tC_01() throws Throwable
 	{
 		
 		ExcelUtils eUtil= new ExcelUtils();
@@ -101,12 +101,26 @@ public class AddEmployeeTC01_Test extends BaseClass
 		try
 		{
 			hp.navigateToAddEmployee(driver);
+			wutil.waitUntilEleToBeClickable(driver, emplp.getAddEmpBtn(), 120);
 			emplp.getAddEmpBtn().click();
 		}
+		
 		catch (Exception e) 
 		{
-			wutil.waitUntilEleToBeClickable(driver, emplp.getAddEmpBtn(), 40);
-			emplp.getAddEmpBtn().click();
+			boolean flag=true;
+			while(flag)
+			{
+				try
+				{
+					wutil.waitUntilEleToBeClickable(driver, emplp.getAddEmpBtn(), 100);
+					emplp.getAddEmpBtn().click();
+					flag=false;
+				}
+				catch (Exception e1) 
+				{
+					// TODO: handle exception
+				}
+			}
 		}
 
 		//Change Date Formats...during Script execution it is entering in different format..
@@ -136,7 +150,28 @@ public class AddEmployeeTC01_Test extends BaseClass
 		String expEmployeeId = eUtil.readDataFromExcel("TC_01", 2, 16);
 		String expEmpFname = eUtil.readDataFromExcel("TC_01", 3, 16);
 		
-		adEmp.searchEmployee(driver, expEmployeeId);
+		try
+		{
+			wUtil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 60);
+			emplp.getSearchBoxEle().sendKeys(expEmployeeId);
+		}
+		catch (Exception e) 
+		{
+			boolean flag2=true;
+			while(flag2)
+			{
+				try
+				{
+					wUtil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 60);
+					emplp.getSearchBoxEle().sendKeys(expEmployeeId);
+					flag2=false;
+				}
+				catch (Exception e1) 
+				{
+					// TODO: handle exception
+				}
+			}
+		}
 		
 		String actEmpName = emplp.getEmpNameByUsingEmpID(driver, expEmployeeId);
 		

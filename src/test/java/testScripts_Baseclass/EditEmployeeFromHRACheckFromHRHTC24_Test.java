@@ -14,7 +14,7 @@ import com.ObjectRepo.EmployeeListPage;
 import com.ObjectRepo.Home_Page;
 import com.ObjectRepo.LoginPage;
 
-//Tested
+//Tested-now
 @Listeners(com.HRM.GenericUtils.ListenersImplementation.class)
 public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 {
@@ -26,7 +26,7 @@ public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 		WebDriverUtils wUtil=new WebDriverUtils();
 
 		wUtil.waitForpageLoad(driver, 20);
-		wUtil.waitforPageLoadImplicitly(driver, 20);
+		wUtil.waitforPageLoadImplicitly(driver, 60);
 
 		String hrAssistantUserEmail = eUtil.readDataFromExcel("TC_24", 3, 1);
 		String hrAssistantPasswors = eUtil.readDataFromExcel("TC_24", 4, 1);
@@ -39,19 +39,33 @@ public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 		
 		Home_Page hp=new Home_Page(driver);
 
+		String employeeId = eUtil.readDataFromExcel("TC_24", 2, 4);
+		EmployeeListPage emplp=new EmployeeListPage(driver);
+		
 		try
 		{
 			hp.navigateToAddEmployee(driver);
+			wUtil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
 		}
 		catch (Exception e) 
 		{
-			
-		}
+			boolean flag=true;
+			while(flag)
+			{
+				try
+				{
+					wUtil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
+					flag=false;
+				}
+				catch (Exception e1) 
+				{
+					// TODO: handle exception
+				}
+			}
 
-		String employeeId = eUtil.readDataFromExcel("TC_24", 2, 4);
-		EmployeeListPage emplp=new EmployeeListPage(driver);
-		emplp.searchEmployee(employeeId);
+		}
 		
+		emplp.getSearchBoxEle().sendKeys(employeeId);
 		emplp.editEmployee(driver, employeeId);
 		
 		String employeeFirstNameToModify = eUtil.readDataFromExcel("TC_24",3, 4);	
@@ -65,7 +79,19 @@ public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
 		
-		hp.logOutApp();
+		boolean flag=true;
+		while(flag)
+		{
+			try 
+			{
+				hp.logOutApp();
+				flag=false;
+			}
+			catch (Exception e) 
+			{
+				// TODO: handle exception
+			}
+		}
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
 

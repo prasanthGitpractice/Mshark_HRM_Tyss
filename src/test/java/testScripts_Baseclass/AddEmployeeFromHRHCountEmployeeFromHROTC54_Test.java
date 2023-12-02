@@ -16,7 +16,7 @@ import com.ObjectRepo.EmployeeListPage;
 import com.ObjectRepo.Home_Page;
 import com.ObjectRepo.LoginPage;
 
-// Tested
+// Tested-now
 @Listeners(com.HRM.GenericUtils.ListenersImplementation.class)
 public class AddEmployeeFromHRHCountEmployeeFromHROTC54_Test extends BaseClass
 {
@@ -89,12 +89,26 @@ public class AddEmployeeFromHRHCountEmployeeFromHROTC54_Test extends BaseClass
 		try
 		{
 			hp.navigateToAddEmployee(driver);
+			wutil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
 		}
-		catch(Exception e)
+		catch (Exception e) 
 		{
-			wutil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 30);
-			//addEmp.searchEmployee(expEmployeeId);	
+			boolean flag=true;
+			while(flag)
+			{
+				try
+				{				
+					wutil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
+					flag=false;
+				}
+				catch(Exception e1)
+				{
+					//addEmp.searchEmployee(expEmployeeId);	
+				}
+			}
+
 		}
+		
 		
 		String actEmployeeId = emplp.getActualEmpID(driver, expEmployeeId);
 		

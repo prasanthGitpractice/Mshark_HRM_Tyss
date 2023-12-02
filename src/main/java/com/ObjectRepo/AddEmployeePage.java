@@ -52,7 +52,7 @@ public class AddEmployeePage extends WebDriverUtils
 	private WebElement cancelBtn;
 	
 	
-	@FindBy(xpath = "//input[@type='search']")
+	@FindBy(xpath = "//input[@type='search' and @class='form-control form-control-sm']")
 	WebElement searchBoxEle_Emp;
 	//=========================initialization=====================//
 	public AddEmployeePage(WebDriver driver) {

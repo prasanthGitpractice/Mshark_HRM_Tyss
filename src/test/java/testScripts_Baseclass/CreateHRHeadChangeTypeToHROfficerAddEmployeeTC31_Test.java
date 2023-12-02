@@ -92,8 +92,29 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 
 		wUtil.waitForAlertNswitchNAccept(driver);
 		
-		hp.logOutApp();
+		try
+		{
+			wutil.waitUntilEleToBeClickable(driver, hp.getLogOutBtn(), 100);
+			hp.getLogOutBtn().click();
+		}
+		catch (Exception e) 
+		{
+			boolean flag1=true;
+			while(flag1)
+			{
+				try
+				{
+					wutil.waitUntilEleToBeClickable(driver, hp.getLogOutBtn(), 100);
+					hp.getLogOutBtn().click();
+					flag1=false;
+				}
+				catch (Exception e1) 
+				{
 
+				}
+			}
+		}
+		
 		wUtil.waitForAlertNswitchNAccept(driver);
 
 		String OfficerUn = eUtil.readDataFromExcel("TC_31", 2, 14);
@@ -114,7 +135,28 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		
 		String empId = eUtil.readDataFromExcel("TC_31", 2, 7);
 		
-		emplp.searchEmployee(empId);
+		try
+		{
+			wutil.waitUntilEleToBeVisible(driver, branch_DD, 0);
+			emplp.getSearchBoxEle().sendKeys(empId);
+		}
+		catch (Exception e) 
+		{
+			boolean flag=true;
+			while(flag)
+			{
+				try
+				{
+					wutil.waitUntilEleToBeVisible(driver, branch_DD, 0);
+					emplp.getSearchBoxEle().sendKeys(empId);
+					flag=false;
+				}
+				catch (Exception e1) 
+				{
+					// TODO: handle exception
+				}
+			}
+		}
 		
 		emplp.editEmployee(driver, empId);
 		
