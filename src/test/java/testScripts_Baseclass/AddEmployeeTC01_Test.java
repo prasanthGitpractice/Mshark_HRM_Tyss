@@ -39,7 +39,6 @@ public class AddEmployeeTC01_Test extends BaseClass
 		String PASSWORD = futil.readDataFromPropertyFile("password");
 		String URL = futil.readDataFromPropertyFile("url");
 		
-		//Login as HrHead
 		driver.get(URL);
 		lp.loginAsHrHead(USERNAME, PASSWORD, lp.getDdEle_hrHead());
 		
@@ -77,7 +76,6 @@ public class AddEmployeeTC01_Test extends BaseClass
 		eUtil.readMultipleDataFromExcel("TC_01", driver,8, 9);
 
 		String hrTypeAdmin = eUtil.readDataFromExcel("TC_01", 2, 13);
-		//String hrTypeAdmin = sheet.getRow(2).getCell(13).getStringCellValue();
 		AddAdminPage addAdm=new AddAdminPage(driver);
 		addAdm.selectHrPositionByValue(hrTypeAdmin, addAdm.getPositionDropdown());
 		addAdm.getSaveButton().click();
@@ -118,12 +116,11 @@ public class AddEmployeeTC01_Test extends BaseClass
 				}
 				catch (Exception e1) 
 				{
-					// TODO: handle exception
+
 				}
 			}
 		}
 
-		//Change Date Formats...during Script execution it is entering in different format..
 		eUtil.readMultipleDataFromExcel("TC_01", driver,13, 15);
 
 		String employeeDept = eUtil.readDataFromExcel("TC_01", 2, 4);		
@@ -168,7 +165,7 @@ public class AddEmployeeTC01_Test extends BaseClass
 				}
 				catch (Exception e1) 
 				{
-					// TODO: handle exception
+
 				}
 			}
 		}

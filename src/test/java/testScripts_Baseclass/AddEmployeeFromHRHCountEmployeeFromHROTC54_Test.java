@@ -52,7 +52,6 @@ public class AddEmployeeFromHRHCountEmployeeFromHROTC54_Test extends BaseClass
 			emplp.getAddEmpBtn().click();				
 		}	
 		
-		// adding employee data ----Date fromat is not accepting----change it
 		eUtil.readMultipleDataFromExcel("TC_54", driver, 13, 15);
 
 		String employeeDepartment = eUtil.readDataFromExcel("TC_54", 2, 4);
@@ -103,7 +102,7 @@ public class AddEmployeeFromHRHCountEmployeeFromHROTC54_Test extends BaseClass
 				}
 				catch(Exception e1)
 				{
-					//addEmp.searchEmployee(expEmployeeId);	
+
 				}
 			}
 

@@ -59,7 +59,7 @@ public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 				}
 				catch (Exception e1) 
 				{
-					// TODO: handle exception
+
 				}
 			}
 
@@ -89,7 +89,7 @@ public class EditEmployeeFromHRACheckFromHRHTC24_Test extends BaseClass
 			}
 			catch (Exception e) 
 			{
-				// TODO: handle exception
+
 			}
 		}
 		

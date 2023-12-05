@@ -122,7 +122,7 @@ public class EmployeeListPage
 	public String getActualContactNumberOfEmp(WebDriver driver, String employeeId)
 	{
 		WebDriverUtils wutil=new WebDriverUtils();
-		wutil.waitUntilEleToBeVisible(driver, searchBoxEle, 20);	
+		wutil.waitUntilEleToBeVisible(driver, searchBoxEle, 100);	
 		searchBoxEle.sendKeys(employeeId);
 		driver.findElement(By.xpath("//tbody/tr/td[.='"+employeeId+"']")).click();
 		driver.findElement(By.xpath("//tbody/tr/td[.='"+employeeId+"']/../following::i[@title='Edit Employee']")).click();

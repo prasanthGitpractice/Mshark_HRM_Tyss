@@ -41,7 +41,6 @@ public class CreateHRAssistantDeleteHRAAgainLoginTC34_Test extends BaseClass
 		AdminPage admp=new AdminPage(driver);
 		admp.clickOnAddAdminBtn();
 
-		//implement it as Business library
 		eUtil.readMultipleDataFromExcel("TC_34", driver, 8, 0);
 		
 		String DDdata = ""+eUtil.readDataFromExcel("TC_34", 2, 4);

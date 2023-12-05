@@ -37,6 +37,7 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		
 		LoginPage lp=new LoginPage(driver);
 		lp.loginAsHrHead(USERNAME, PASSWORD, lp.getDdEle_hrHead());
+		System.out.println("Hr head logged in");
 	
 		wUtil.waitForAlertNswitchNAccept(driver);
 		
@@ -46,17 +47,20 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		AdminPage admp=new AdminPage(driver);
 		admp.getAddAdminButton().click();
 		
-		// Implement through Business Logic
 		eUtil.readMultipleDataFromExcel("TC_31", driver, 8, 0);
 		
 		AddAdminPage addAdm=new AddAdminPage(driver);
 		String hrType = eutil.readDataFromExcel("TC_31", 2, 4);
 		addAdm.selectHrPositionByValue(hrType, addAdm.getPositionDropdown());
 		addAdm.getSaveButton().click();
+		System.out.println("admin created line 57");
+
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
 
 		hp.logOutApp();
+		System.out.println("logged out");
+
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
 
@@ -64,12 +68,33 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		String HRHPassword = eUtil.readDataFromExcel("TC_31", 8, 1);
 		
 		lp.loginAsHrHead(HRHUsername, HRHPassword, lp.getDdEle_hrHead());
+		System.out.println("Hr head logged in");
 
 		wUtil.waitForAlertNswitchNAccept(driver);
 		
-		hp.navigateToAddEmployee(driver);
 		EmployeeListPage emplp=new EmployeeListPage(driver);
-		emplp.getAddEmpBtn().click();
+
+		try
+		{
+			hp.navigateToAddEmployee(driver);
+			emplp.getAddEmpBtn().click();
+		}
+		catch (Exception e) 
+		{
+			boolean fLAG=true;
+			while(fLAG)
+			{
+				try
+				{
+					emplp.getAddEmpBtn().click();
+					fLAG=false;
+				}
+				catch (Exception ef) 
+				{
+					// TODO: handle exception
+				}
+			}
+		}
 
 		String department = eUtil.readDataFromExcel("TC_31", 2, 9);
 		String branch = eUtil.readDataFromExcel("TC_31", 2, 11);
@@ -89,11 +114,16 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		addemp.uploadEmpFile201(empFileAbsolutepath);
 		addemp.uploadEmpPic(profilePicAbsolutepath);
 		addemp.clickSaveBtn();
+		System.out.println("employee is created");
+
 
 		wUtil.waitForAlertNswitchNAccept(driver);
+		System.out.println("Alert Accepted line 122");
+
 		
 		try
 		{
+			hp.getProfileICONEle().click();
 			wutil.waitUntilEleToBeClickable(driver, hp.getLogOutBtn(), 100);
 			hp.getLogOutBtn().click();
 		}
@@ -104,6 +134,7 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 			{
 				try
 				{
+					hp.getProfileICONEle().click();
 					wutil.waitUntilEleToBeClickable(driver, hp.getLogOutBtn(), 100);
 					hp.getLogOutBtn().click();
 					flag1=false;
@@ -123,22 +154,13 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		lp.loginAsHrOfficer(OfficerUn, OfficerPwd, lp.getDdEle_hrOfficer());
 
 		wUtil.waitForAlertNswitchNAccept(driver);
-		
-		try
-		{
-			hp.navigateToAddEmployee(driver);
-		}
-		catch (Exception e) 
-		{
-			
-		}
-		
 		String empId = eUtil.readDataFromExcel("TC_31", 2, 7);
 		
 		try
 		{
-			wutil.waitUntilEleToBeVisible(driver, branch_DD, 0);
+			hp.navigateToAddEmployee(driver);
 			emplp.getSearchBoxEle().sendKeys(empId);
+
 		}
 		catch (Exception e) 
 		{
@@ -147,16 +169,15 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 			{
 				try
 				{
-					wutil.waitUntilEleToBeVisible(driver, branch_DD, 0);
 					emplp.getSearchBoxEle().sendKeys(empId);
 					flag=false;
 				}
-				catch (Exception e1) 
+				catch (Exception e2) 
 				{
 					// TODO: handle exception
 				}
 			}
-		}
+		}	
 		
 		emplp.editEmployee(driver, empId);
 		
@@ -177,12 +198,59 @@ public class CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test extends BaseC
 		edtemPage.updateEmployee(driver, updatedContactNo, employeeId, empFileAbsolutepath2, profilePicAbsolutepath2);
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
+		try
+		{
+			wutil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
+
+		}
+		catch (Exception e) 
+		{
+			boolean b=true;
+			while(b)
+			{
+				try
+				{
+					wutil.waitUntilEleToBeVisible(driver, emplp.getSearchBoxEle(), 100);
+					b=false;
+				}
+				catch (Exception e1) {
+					// TODO: handle exception
+				}
+			}
+		}
 		
 		String actualContactNo = emplp.getActualContactNumberOfEmp(driver, employeeId);
+		EditEmployeePage edemp=new EditEmployeePage(driver);
+		try
+		{
+			edemp.getCloaseBtn().click();
+		}
+		catch (Exception e) 
+		{
+
+		}
 		
 		Assert.assertEquals(actualContactNo, updatedContactNo);
-		
-		hp.logOutApp();
+		try
+		{
+			hp.logOutApp();
+		}
+		catch (Exception e) 
+		{
+			boolean b1=true;
+			while(b1)
+			{
+				try
+				{
+					hp.logOutApp();
+					b1=false;
+				}
+				catch (Exception e1) 
+				{
+
+				}
+			}
+		}
 		
 		wUtil.waitForAlertNswitchNAccept(driver);
 
