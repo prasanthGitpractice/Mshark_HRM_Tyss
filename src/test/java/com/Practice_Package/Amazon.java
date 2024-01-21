@@ -50,7 +50,8 @@ public class Amazon {
 				System.out.println(allTvs.get(i).getText()+"---------->"+Price);
 			}	
 		}
-
+		
+	
 	}
 
 }

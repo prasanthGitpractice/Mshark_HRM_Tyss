@@ -46,7 +46,7 @@ public class RMGYantraTest
 
 		driver.findElement(By.xpath("//span[.='Create Project']")).click();
 
-		driver.findElement(By.name("projectName")).sendKeys("TY_dummy2_sdet52");
+		driver.findElement(By.name("projectName")).sendKeys("TY_dummy2_sdet5227");
 
 		driver.findElement(By.name("createdBy")).sendKeys("VijayaLakshmi");
 
@@ -58,7 +58,7 @@ public class RMGYantraTest
 
 		driver.findElement(By.xpath("//input[@value='Add Project']")).click();
 
-		String actualName_project="TY_dummy2_sdet52";
+		String actualName_project="TY_dummy2_sdet5227";
 		boolean flag=false;
 		
 		// Register driver
@@ -90,16 +90,6 @@ public class RMGYantraTest
 
 		// Close Database
 		con.close();
-
-
-
-
-
-
-
-
-
-
 
 	}
 

@@ -40,7 +40,8 @@ public class ListenersImplementation implements ITestListener
 		//logging report on test Failure
 		String method = result.getMethod().getMethodName();
 		String methodName = method + new JavaUtils().systemDateInFormat();
-		test.addScreenCaptureFromPath(methodName);
+		test.addScreenCaptureFromPath(methodName); // its is going to add screenshot name of failed testscript, but it will not add any screenshot in extent report.
+		// Based on this screenshot name present in report, we can search that screenshot in screenshots folder inorder to debug issue.
 		try {
 			WebDriverUtils.getScreenshot(BaseClass.sdriver, methodName);
 		} 

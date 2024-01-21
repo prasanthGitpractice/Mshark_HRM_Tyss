@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts_Baseclass.CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test">
+      <class name="com.Practice_Package.Task_O9">
         <methods>
-          <include name="config_BC"/>
-          <include name="config_BS"/>
-          <include name="config_AC"/>
-          <include name="config_AS"/>
-          <include name="config_BM"/>
-          <include name="config_AM"/>
-          <include name="tc31"/>
+          <include name="method"/>
         </methods>
-      </class> <!-- testScripts_Baseclass.CreateHRHeadChangeTypeToHROfficerAddEmployeeTC31_Test -->
+      </class> <!-- com.Practice_Package.Task_O9 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

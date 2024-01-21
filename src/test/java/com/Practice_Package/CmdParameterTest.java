@@ -23,8 +23,8 @@ public class CmdParameterTest {
 		System.out.println(PASSWORD);
 
 
-		WebDriverManager.chromedriver().setup(); WebDriver driver=new
-		ChromeDriver();
+		WebDriverManager.chromedriver().setup(); 
+		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(URL);

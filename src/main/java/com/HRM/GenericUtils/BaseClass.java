@@ -13,6 +13,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.ObjectRepo.Home_Page;
+import com.ObjectRepo.LoginPage;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass 
@@ -21,7 +24,10 @@ public class BaseClass
 	public FileUtils futil=new FileUtils();
 	public ExcelUtils eutil=new ExcelUtils();
 	public WebDriverUtils wutil=new WebDriverUtils();
-	public WebDriver driver;
+	public LoginPage lp=null;
+	public Home_Page hp=null;
+
+	public WebDriver driver; // why it can't be static
 	public static WebDriver sdriver;
 
 	@BeforeSuite(alwaysRun = true)
@@ -65,8 +71,12 @@ public class BaseClass
 	}
 
 	@BeforeMethod(alwaysRun = true)
-	public void config_BM()
+	public void config_BM() throws Throwable
 	{
+		String USERNAME = futil.readDataFromPropertyFile("userEmail");
+		String PASSWORD = futil.readDataFromPropertyFile("password");
+		lp=new LoginPage(driver);
+		lp.loginAsHrHead(USERNAME, PASSWORD, lp.getDdEle_hrHead());
 		//System.out.println("-------------"+result.getTestClass()+"-------------");
 		//System.out.println("-------------"+result.getTestClass().getName()+"-------------");
 		System.out.println("----Try Login to Application----");
@@ -75,13 +85,15 @@ public class BaseClass
 	@AfterMethod(alwaysRun = true)
 	public void config_AM() throws Throwable
 	{
+		hp=new Home_Page(driver);
+		hp.logOutApp();
 		System.out.println("----Logged-Out of Application----");
 	}
 	//@AfterTest
 	@AfterClass(alwaysRun = true)
 	public void config_AC()
 	{
-		//driver.quit();
+		driver.quit();
 		System.out.println("----Browser Closed----");
 	}
 	@AfterSuite(alwaysRun = true)

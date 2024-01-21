@@ -404,7 +404,7 @@ public class WebDriverUtils
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dst = new File(".\\ScreenShots\\"+screenshotName+".png");
-		FileUtils.copyFile(src, dst);
+		FileUtils.copyFile(src, dst);// here it is the need of commons.io jar file
 		
 		return dst.getAbsolutePath(); //used for extent reporting
 	
